@@ -71,7 +71,7 @@ void uni(int par,int kid)
         }
     }
 }
-inline bool first(int a,int b)//a 放在 b之前?
+inline bool first(int a,int b)
 {
     return tr[a].c*tr[b].t>tr[b].c*tr[a].t;
 }

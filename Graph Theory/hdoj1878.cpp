@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<string.h>
 #include<iostream>
-
 using namespace std;
 
 typedef struct
@@ -26,8 +25,6 @@ void unions(int ra, int rb)
     nodes[rb].parent = ra;
 }
 
-
-
 int main()
 {
     int i, n, m;
@@ -36,12 +33,9 @@ int main()
     while(cin>>n&&(n!=0))
     {
         cin>>m;
-
         memset(nodes, 0, sizeof(Node)*(n+1));
         memset(degree, 0, sizeof(int)*(n+1));
-
         count = n-1;
-
         for(i = 0; i < m; i++)
         {
             cin>>na>>nb;
@@ -58,12 +52,9 @@ int main()
                 unions(ra,rb);
             }
         }
-
         ok = 1;
-
         if(count)
             ok = 0;
-
         else
         {
             for(i = 1; i <= n; i++)
